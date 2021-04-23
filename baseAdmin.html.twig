@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    {# Meta #}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>Admin interface</title>
+
+    {# Assets #}
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset("images/logo.png") }}" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="{{ asset("assets/vendor/nucleo/css/nucleo.css")}}" type="text/css">
+    <link rel="stylesheet" href="{{ asset("assets/vendor/@fortawesome/fontawesome-free/css/all.min.css")}}" type="text/css">
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="{{ asset("assets/css/argon.css?v=1.2.0")}}" type="text/css">
+
+</head>
+<body>
+    <!-- Sidenav -->
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        <div class="scrollbar-inner">
+            <!-- Brand -->
+            <div class="sidenav-header  align-items-center" >
+                <a href="javascript:void(0)" class="navbar-brand">
+                    <img src="{{ asset("images/Simpalha.png") }}" class="navbar-brand-img" alt="...">
+                </a>
+            </div>
+            <div class="navbar-inner">
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <!-- Nav items -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <i class="ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ni ni-planet text-orange"></i>
+                                <span class="nav-link-text">P2P</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ni ni-single-02 text-yellow"></i>
+                                <span class="nav-link-text">Profile</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ni ni-bullet-list-67 text-default"></i>
+                                <span class="nav-link-text">Quizz</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('ressources_index') }}">
+                                <i class="ni ni-key-25 text-info"></i>
+
+                                <span class="nav-link-text">Resources</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ni ni-circle-08 text-pink"></i>
+                                <span class="nav-link-text">Candidacy</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ni ni-send text-dark"></i>
+                                <span class="nav-link-text">Posts&Comments</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Divider -->
+                    <!-- Heading -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main content -->
+    <div class="main-content" id="panel">
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <!-- Page content -->
+        <div class="container-fluid mt--6">
+            {% block body %}{% endblock %}
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- Footer -->
+            <footer class="footer pt-0">
+
+            </footer>
+        </div>
+    </div>
+
+{% block scripts %}
+    <!-- Argon Scripts -->
+    <!-- Core -->
+
+    <script src="{{ asset("assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js") }}"></script>
+    <script src="{{ asset("assets/vendor/js-cookie/js.cookie.js") }}></script>
+
+    <!-- Optional JS -->
+    <script src="{{ asset("assets/vendor/chart.js/dist/Chart.min.js")}}"></script>
+    <script src="{{ asset("assets/vendor/chart.js/dist/Chart.extension.js") }}"></script>
+    <!-- Argon JS -->
+    <script src="{{ asset("assets/js/argon.js?v=1.2.0")}}"></script>
+{% endblock %}
+</body>
+</html>

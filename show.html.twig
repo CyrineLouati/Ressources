@@ -1,0 +1,46 @@
+{% extends 'baseAdmin.html.twig' %}
+
+
+{% block body %}
+    <title>Ressources</title>
+    <a href="{{ path('ressources_index') }}"><button class="btn">back to list</button></a> </br>
+
+    <h1 align="center">{{ ressource.title }}</h1>
+
+    <table class="table">
+        <tbody>
+            <tr><!--
+                <th>Idr</th>
+                <td>{{ ressource.idr }}</td>
+            </tr>
+            <tr>
+                <th>Path</th>
+                <td>{{ ressource.path }}</td>
+            </tr>-->
+            <tr>
+                <th>Title</th>
+                <td>{{ ressource.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ ressource.description }}</td>
+            </tr>
+            <tr>
+                <th>Module</th>
+                <td>{{ ressource.module }}</td>
+            </tr>
+            <tr>
+
+                <th>Viewing resource:</th>
+                <td> <h5>Via path : {{ ressource.path }}  </h5>
+                    <img src="{{ asset("#{ressource.getPath()}") }}" /></td>            </tr>
+
+
+        </tbody>
+    </table>
+
+
+    <a href="{{ path('ressources_edit', {'idr': ressource.idr}) }}"> <button class="btn">edit</button></a>
+    {{ include('ressources/_delete_form.html.twig') }}
+
+{% endblock %}
